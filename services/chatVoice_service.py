@@ -12,7 +12,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 async def process_question(question):
     try:
         # Generar la respuesta del modelo (simulado)
-        response = model.generate_content("responde esta pergunta de manera que simules que estas hablando para convertirla a voz y eres un experto en el tema de la pregunta: "+ question)
+        response = model.generate_content("responde esta pergunta de manera que simules que estas hablando para convertirla a voz, evita usar * y #, ademas eres un experto en el tema de la pregunta: "+ question)
         texto = response.text
         
         # Crear el objeto gTTS con el texto generado
